@@ -1,19 +1,24 @@
 import React, { useState } from "react";
-import Deck from "./Deck";
+import Header from "./Header";
 
-//imagens
-import Logo from "./assets/img/logo.png";
+export default function App() {
 
-
-export default function App(){
-
-    return(
-      <div className="screen-container"> 
-        <div className="logo-container">
-            <img src={Logo} alt="logo" />
-            <h1>ZapRecall</h1>
-        </div>
-      </div>
-       
+    return (
+        <ScreenContainer>
+            <Header />
+        </ScreenContainer>
     )
 }
+
+const ScreenContainer = styled.div`
+    background-color: #FB6B6B;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 200px;
+
+`

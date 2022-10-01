@@ -10,11 +10,10 @@
   padding-bottom: 200px;
 }
 
-.logo-container {
+/*.logo-container {
   display: flex;
   align-items: center;
   margin: 40px 0 20px 0;
- 
 }
 
 .logo-container img {
@@ -29,7 +28,7 @@
   line-height: 45px;
   color: #FFFFFF;
   margin-left: 20px;
-}
+}*/
 
 .footer-concluidos {
   width: 100%;
