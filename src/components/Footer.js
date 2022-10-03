@@ -1,14 +1,21 @@
 import styled from "styled-components";
+import Deck from "./Deck";
+import React, { useState } from "react";
 
-export default function Footer(){
+export default function Footer({resposta, setResposta, abriu, setAbriu, concluido, setConcluido}){
+    //estados
+    
+    const colorNaoSei = '#FF3030'
+    const colorQuase ='#FF922E'
+    const colorZap ='#2FBE34'
     return(
         <>
         <ContainerBot>
         <ContainderBotoes>
-            <button>Não sei</button>
-            <button>Quase não lembrei</button>
-            <button>Zap!</button>
-        </ContainderBotoes>0/8 Concluídos</ContainerBot>
+            <Botao cor={colorNaoSei} onClick={(() => console.log("naosei"))}>Não sei</Botao>
+            <Botao cor={colorQuase} onClick={(() => console.log("Quase"))}>Quase não lembrei</Botao>
+            <Botao cor={colorZap} onClick={(() => console.log("Zap"))}>Zap!</Botao>
+        </ContainderBotoes>{concluido}/{Deck.length} Concluídos</ContainerBot>
         </>
     )
 }
@@ -29,8 +36,7 @@ const ContainerBot = styled.div`
     color: #333333;
     padding: 10px;
 `
-const ContainderBotoes = styled.div`
-    &:Button {
+const Botao = styled.button`
     width: 90px;
     font-family: 'Recursive';
     font-style: normal;
@@ -42,14 +48,16 @@ const ContainderBotoes = styled.div`
     justify-content: center;
     text-align: center;
     color: #FFFFFF;
-    background: blue;
+    background: ${props => props.cor};
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 1px solid ${props => props.cor};
     padding:5px;
-    
+    cursor: pointer;
+`
+
+const ContainderBotoes = styled.div`
     display: flex;
     width: 80%;
     justify-content: space-between;
     margin: 20px;
-
 `
