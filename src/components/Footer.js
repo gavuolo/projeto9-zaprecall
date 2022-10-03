@@ -12,9 +12,9 @@ export default function Footer({resposta, setResposta, abriu, setAbriu, concluid
         <>
         <ContainerBot>
         <ContainderBotoes>
-            <Botao cor={colorNaoSei} onClick={(() => console.log("naosei"))}>Não sei</Botao>
-            <Botao cor={colorQuase} onClick={(() => console.log("Quase"))}>Quase não lembrei</Botao>
-            <Botao cor={colorZap} onClick={(() => console.log("Zap"))}>Zap!</Botao>
+            <Botao data-identifier="forgot-btn" cor={colorNaoSei} onClick={(() => console.log("naosei"))}>Não sei</Botao>
+            <Botao  data-identifier="almost-forgot-btn" cor={colorQuase} onClick={(() => console.log("Quase"))}>Quase não lembrei</Botao>
+            <Botao  data-identifier="zap-btn" cor={colorZap} onClick={(() => console.log("Zap"))}>Zap!</Botao>
         </ContainderBotoes>{concluido}/{Deck.length} Concluídos</ContainerBot>
         </>
     )

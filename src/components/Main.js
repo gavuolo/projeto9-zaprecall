@@ -11,7 +11,8 @@ export default function Main({finalizar, setFinalizar, abriu, setAbriu, deck}) {
     return (
         <Conteudo>
             {deck.map((a, i) =>
-            <Flashcards
+            <Flashcards 
+            data-identifier="flashcard-counter"
             key={i}
 
             num={a.num}

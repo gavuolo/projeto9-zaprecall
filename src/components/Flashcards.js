@@ -11,23 +11,24 @@ export default function Flashcards({ pergunta, num, resposta, finalizar, setFina
     }
     function FaseResposta(){
         setFase(2)
+
     }
 
     return (
         <>      
         {fase === 0 ?     
-            <PerguntaFechada>
+            <PerguntaFechada data-identifier="flashcard">
                 <p>Pergunta {num}</p>
-                <img src={play} alt={play} onClick={FasePergunta} />
+                <img data-identifier="flashcard-show-btn" src={play} alt={play} onClick={FasePergunta} />
             </PerguntaFechada>
         :
-            <PerguntaAberta>
+            <PerguntaAberta data-identifier="flashcard-index-item">
                 {fase === 2? 
-                <p>{resposta}</p>
+                <p data-identifier="flashcard-answer">{resposta}</p>
                 :
                 <>
-                <p>{pergunta}</p> 
-                <img src={reset} alt={reset} onClick={FaseResposta} />
+                <p data-identifier="flashcard-question">{pergunta}</p> 
+                <img data-identifier="flashcard-turn-btn" src={reset} alt={reset} onClick={FaseResposta} />
                 </>}
             </PerguntaAberta>
         }
